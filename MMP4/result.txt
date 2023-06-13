@@ -14,6 +14,9 @@ CNNRelu:
 Test loss: 0.0412040576338768
 Test accuracy: 0.9866999983787537
 
+Test loss: 0.03737593814730644
+Test accuracy: 0.9884999990463257
+
 CNNSigmoid:
 Test loss: 0.27226924896240234
 Test accuracy: 0.9257000088691711
@@ -21,3 +24,57 @@ Test accuracy: 0.9257000088691711
 CNNTanH:
 Test loss: 0.06842401623725891
 Test accuracy: 0.9805999994277954
+
+CNNRelu: 20 neurons
+Test loss: 0.039700981229543686
+Test accuracy: 0.9865000247955322
+
+CNNRelu: 10 neurons
+Test loss: 0.04204711318016052
+Test accuracy: 0.9861999750137329
+
+CNNRelu: 10 neurons
+Test loss: 0.04628491774201393
+Test accuracy: 0.98580002784729
+
+
+# Define the model
+model = Sequential([
+    Conv2D(32, kernel_size=(3, 3), activation='relu', input_shape=(28, 28, 1)),
+    MaxPooling2D(pool_size=(2, 2)),
+    Conv2D(64, kernel_size=(3, 3), activation='relu'),
+    MaxPooling2D(pool_size=(2, 2)),
+    Flatten(),
+    Dense(1500, activation='relu'),
+    Dense(10, activation='softmax')
+])
+1.
+Test loss: 0.028357747942209244
+Test accuracy: 0.9905999898910522
+2.
+Test loss: 0.02836584858596325
+Test accuracy: 0.991599977016449
+3.
+Test loss: 0.02915658801794052
+Test accuracy: 0.9908000230789185
+4.
+Test loss: 0.02639688178896904
+Test accuracy: 0.9911999702453613
+5.
+Test loss: 0.034036505967378616
+Test accuracy: 0.9909999966621399
+6.
+Test loss: 0.03891419619321823
+Test accuracy: 0.991100013256073
+7.
+Test loss: 0.04211796820163727
+Test accuracy: 0.9907000064849854
+8.
+Test loss: 0.04472535848617554
+Test accuracy: 0.9908000230789185
+9.
+Test loss: 0.04681465029716492
+Test accuracy: 0.9908000230789185
+10.
+Test loss: 0.048881612718105316
+Test accuracy: 0.9908999800682068
